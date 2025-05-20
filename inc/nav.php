@@ -80,6 +80,16 @@
 						<span>Manufacturers</span>
 					</a>
 				</li>
+
+<li>
+					<a href="workorder.php">
+						<i class="fa fa-folder" aria-hidden="true"></i>
+						<span>WorkOrders</span>
+					</a>
+				</li>
+
+
+
 				<li>
 					<a href="create_task.php">
 						<i class="fa fa-plus" aria-hidden="true"></i>

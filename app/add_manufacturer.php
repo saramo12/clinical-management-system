@@ -38,7 +38,7 @@ if (isset($_SESSION['role']) && isset($_SESSION['id']) && $_SESSION['role'] == '
 
 
         // إعداد استعلام الإدخال
-        $sql = "INSERT INTO companies (
+        $sql = "INSERT INTO manufacturer (
                     name,  contact_name, contact_title,phone,contact_mobile, contact_email,note,
 ,hospital_code
                 ) VALUES (

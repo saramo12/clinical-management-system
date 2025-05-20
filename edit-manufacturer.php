@@ -161,7 +161,7 @@ if (isset($_SESSION['role']) && isset($_SESSION['id']) && $_SESSION['role'] == "
             <?php } ?>
             
             <!-- نموذج تعديل المستخدم -->
-            <form class="form-1" method="POST" action="app/update-manufacturer.php">
+            <form class="form-1" method="POST" action="app/update-user.php">
                 <div class="input-holder">
                     <label for="name">Name</label>
                     <input type="text" name="name" id="name" class="input-1" placeholder="Name" value="<?= htmlspecialchars($user['name']); ?>" required />
