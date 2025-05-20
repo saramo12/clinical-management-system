@@ -99,6 +99,12 @@
 						<span>Calibration</span>
 					</a>
 				</li>
+				<li>
+					<a href="invoices.php">
+						<i class="fa fa-folder" aria-hidden="true"></i>
+						<span>Invoices</span>
+					</a>
+				</li>
 
 
 				<li>
