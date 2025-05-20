@@ -93,6 +93,12 @@
 						<span>PurchasingOrders</span>
 					</a>
 				</li>
+<li>
+					<a href="calibration.php">
+						<i class="fa fa-folder" aria-hidden="true"></i>
+						<span>Calibration</span>
+					</a>
+				</li>
 
 
 				<li>
