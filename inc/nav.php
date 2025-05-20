@@ -87,7 +87,12 @@
 						<span>WorkOrders</span>
 					</a>
 				</li>
-
+<li>
+					<a href="purchasing-order.php">
+						<i class="fa fa-folder" aria-hidden="true"></i>
+						<span>PurchasingOrders</span>
+					</a>
+				</li>
 
 
 				<li>
