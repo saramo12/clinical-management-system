@@ -224,7 +224,7 @@ if (isset($_SESSION['role']) && isset($_SESSION['id']) && $_SESSION['role'] == "
     <div class="body">
         <?php include "inc/nav.php"; ?>
         <section class="section-1">
-            <h4 class="title">Manage Purchasing Order <a href="add-workorder.php">Add Purchasing Order</a></h4>
+            <h4 class="title">Manage Purchasing Order <a href="add-purchasing-order.php">Add Purchasing Order</a></h4>
 
             <!-- عرض رسائل النجاح -->
             <?php if (isset($_GET['success'])) { ?>
