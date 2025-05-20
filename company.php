@@ -202,35 +202,25 @@ if (isset($_SESSION['role']) && isset($_SESSION['id']) && $_SESSION['role'] == "
             }
             /* أسماء الأعمدة في الوضع المتجاوب */
             .main-table td:nth-of-type(1)::before { content: "#"; }
-            .main-table td:nth-of-type(2)::before { content: "Serial Number"; }
+            .main-table td:nth-of-type(2)::before { content: "Name"; }
             
             
-            .main-table td:nth-of-type(3)::before { content: "Role"; }
-            .main-table td:nth-of-type(4)::before { content: "Floor"; }
-            .main-table td:nth-of-type(5)::before { content: "Department"; }
-            .main-table td:nth-of-type(6)::before { content: "Department Now"; }
-            .main-table td:nth-of-type(7)::before { content: "Room"; }
-            .main-table td:nth-of-type(8)::before { content: "Device Name"; }
-            .main-table td:nth-of-type(9)::before { content: "Accessories"; }
-            .main-table td:nth-of-type(10)::before { content: "Manufacturer"; }
-            .main-table td:nth-of-type(11)::before { content: "Origin"; }
-            .main-table td:nth-of-type(12)::before { content: "Company"; }
-            .main-table td:nth-of-type(13)::before { content: "Model"; }
-            .main-table td:nth-of-type(14)::before { content: "QT"; }
-            .main-table td:nth-of-type(15)::before { content: "BMD-Code"; }
-            .main-table td:nth-of-type(16)::before { content: "Arrival Date"; }
-            .main-table td:nth-of-type(17)::before { content: "Installation Date"; }
-            .main-table td:nth-of-type(18)::before { content: "Purchasing Order Date"; }
-            .main-table td:nth-of-type(19)::before { content: "Price"; }
-            .main-table td:nth-of-type(20)::before { content: "Warranty Period"; }
-            .main-table td:nth-of-type(21)::before { content: "Warranty Start"; }
-            .main-table td:nth-of-type(22)::before { content: "Warranty End"; }
-            .main-table td:nth-of-type(23)::before { content: "Company Contact"; }
-            .main-table td:nth-of-type(24)::before { content: "Company Telephone"; }
-                        .main-table td:nth-of-type(25)::before { content: "Hospital Code"; }
+            .main-table td:nth-of-type(3)::before { content: "Phone"; }
+            .main-table td:nth-of-type(4)::before { content: "Address"; }
+            .main-table td:nth-of-type(5)::before { content: "Email"; }
+            .main-table td:nth-of-type(6)::before { content: "Contact Name1"; }
+            .main-table td:nth-of-type(7)::before { content: "Contact Title1"; }
+            .main-table td:nth-of-type(8)::before { content: "Contact Mobile1"; }
+            .main-table td:nth-of-type(9)::before { content: "Contact Name2"; }
+            .main-table td:nth-of-type(10)::before { content: "Contact Title2"; }
+            .main-table td:nth-of-type(11)::before { content: "Contact Mobile2"; }
+            .main-table td:nth-of-type(12)::before { content: "Contact Name3"; }
+            .main-table td:nth-of-type(13)::before { content: "Contact Title3"; }
+            .main-table td:nth-of-type(14)::before { content: "Contact Mobile3"; }
+            .main-table td:nth-of-type(15)::before { content: "Hospital-Code"; }
+            
 
-            .main-table td:nth-of-type(26)::before { content: "Device Safety Test"; }
-            .main-table td:nth-of-type(27)::before { content: "Action"; }
+            
         }
     </style>
 </head>
@@ -240,7 +230,7 @@ if (isset($_SESSION['role']) && isset($_SESSION['id']) && $_SESSION['role'] == "
     <div class="body">
         <?php include "inc/nav.php"; ?>
         <section class="section-1">
-            <h4 class="title">Manage Devices <a href="add-device.php">Add Device</a></h4>
+            <h4 class="title">Manage Companies <a href="add-company.php">Add Company</a></h4>
 
             <!-- عرض رسائل النجاح -->
             <?php if (isset($_GET['success'])) { ?>
@@ -257,33 +247,22 @@ if (isset($_SESSION['role']) && isset($_SESSION['id']) && $_SESSION['role'] == "
                     <thead>
                         <tr>
                             <th>#</th>
-                                                        <th>Serial Number</th>
+                                                        <th>Name</th>
 
-                            <th>Role</th>
-                            <th>Floor</th>
-                            <th>Department</th>
-                            <th>Department Now</th>
-                            <th>Room</th>
-                            <th>Device Name</th>
-                            <th>Accessories</th>
-                            <th>Manufacturer</th>
-                            <th>Origin</th>
-                            <th>Company</th>
-                            <th>Model</th>
-                            <th>QT</th>
-                            <th>BMD-Code</th>
-                            <th>Arrival Date</th>
-                            <th>Installation Date</th>
-                            <th>Purchasing Order Date</th>
-                            <th>Price</th>
-                            <th>Warranty Period</th>
-                            <th>Warranty Start</th>
-                            <th>Warranty End</th>
-                            <th>Company Contact</th>
-                            <th>Company Telephone</th>
+                            <th>Phone</th>
+                            <th>Address</th>
+                            <th>Email</th>
+                            <th>Contact Name1</th>
+                            <th>Contact Title1</th>
+                            <th>Contact Mobile1</th>
+                             <th>Contact Name2</th>
+                            <th>Contact Title2</th>
+                            <th>Contact Mobile2</th>
+                             <th>Contact Name3</th>
+                            <th>Contact Title3</th>
+                            <th>Contact Mobile3</th>
                                                         <th>Hospital Code</th>
 
-                            <th>Device Safety Test</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -293,33 +272,24 @@ if (isset($_SESSION['role']) && isset($_SESSION['id']) && $_SESSION['role'] == "
                                 <td><?= ++$i ?></td>
                                                                 <td><?= htmlspecialchars($user['serial_number'] ?? '') ?></td>
 
-                                <td><?= htmlspecialchars($user['role']) ?></td>
-                                <td><?= htmlspecialchars($user['floor'] ?? '') ?></td>
-                                <td><?= htmlspecialchars($user['department'] ?? '') ?></td>
-                                <td><?= htmlspecialchars($user['department_now'] ?? '') ?></td>
-                                <td><?= htmlspecialchars($user['room'] ?? '') ?></td>
-                                <td><?= htmlspecialchars($user['device_name'] ?? '') ?></td>
-                                <td><?= htmlspecialchars($user['accessories'] ?? '') ?></td>
-                                <td><?= htmlspecialchars($user['manufacturer'] ?? '') ?></td>
-                                <td><?= htmlspecialchars($user['origin'] ?? '') ?></td>
-                                <td><?= htmlspecialchars($user['company'] ?? '') ?></td>
-                                <td><?= htmlspecialchars($user['model'] ?? '') ?></td>
-                                <td><?= htmlspecialchars($user['qt'] ?? '') ?></td>
-                                <td><?= htmlspecialchars($user['bmd_code'] ?? '') ?></td>
-                                <td><?= htmlspecialchars($user['arrival_date'] ?? '') ?></td>
-                                <td><?= htmlspecialchars($user['installation_date'] ?? '') ?></td>
-                                <td><?= htmlspecialchars($user['purchasing_order_date'] ?? '') ?></td>
-                                <td><?= htmlspecialchars($user['price'] ?? '') ?></td>
-                                <td><?= htmlspecialchars($user['warranty_period'] ?? '') ?></td>
-                                <td><?= htmlspecialchars($user['warranty_start'] ?? '') ?></td>
-                                <td><?= htmlspecialchars($user['warranty_end'] ?? '') ?></td>
-                                <td><?= htmlspecialchars($user['company_contact'] ?? '') ?></td>
-                                <td><?= htmlspecialchars($user['company_telephone'] ?? '') ?></td>
+                                <td><?= htmlspecialchars($user['name']) ?></td>
+                                <td><?= htmlspecialchars($user['phone'] ?? '') ?></td>
+                                <td><?= htmlspecialchars($user['address'] ?? '') ?></td>
+                                <td><?= htmlspecialchars($user['email'] ?? '') ?></td>
+                                <td><?= htmlspecialchars($user['contact_name1'] ?? '') ?></td>
+                                <td><?= htmlspecialchars($user['contact_title1'] ?? '') ?></td>
+                                <td><?= htmlspecialchars($user['contact_mobile1'] ?? '') ?></td>
+                                 <td><?= htmlspecialchars($user['contact_name2'] ?? '') ?></td>
+                                <td><?= htmlspecialchars($user['contact_title2'] ?? '') ?></td>
+                                <td><?= htmlspecialchars($user['contact_mobile2'] ?? '') ?></td>
+                                 <td><?= htmlspecialchars($user['contact_name3'] ?? '') ?></td>
+                                <td><?= htmlspecialchars($user['contact_title3'] ?? '') ?></td>
+                                <td><?= htmlspecialchars($user['contact_mobile3'] ?? '') ?></td>
+                                
                                                                 <td><?= htmlspecialchars($user['hospital_code'] ?? '') ?></td>
 
-                                <td><?= htmlspecialchars($user['device_safety_test'] ?? '') ?></td>
                                 <td>
-                                    <a href="edit-device.php?id=<?= $user['id'] ?>" class="btn edit-btn" title="Edit">
+                                    <a href="edit-company.php?id=<?= $user['id'] ?>" class="btn edit-btn" title="Edit">
                                         <i class="fa fa-pencil"></i> Edit
                                     </a>
                                     <a href="app/users/delete.php?id=<?= $user['id'] ?>" class="btn delete-btn" title="Delete" onclick="return confirm('Are you sure you want to delete this device?');">

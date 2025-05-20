@@ -59,22 +59,27 @@
 				<li>
 					<a href="user.php">
 						<i class="fa fa-users" aria-hidden="true"></i>
-						<span>Manage Users</span>
+						<span>Users</span>
 					</a>
 				</li>
 				<li>
 					<a href="device.php">
 						<i class="fa fa-users" aria-hidden="true"></i>
-						<span>Manage Devices</span>
+						<span>Devices</span>
 					</a>
 				</li>
 				<li>
-					<a href="projects.php">
+					<a href="company.php">
 						<i class="fa fa-folder" aria-hidden="true"></i>
-						<span>Projects</span>
+						<span>Companies</span>
 					</a>
 				</li>
-
+<li>
+					<a href="manufacturer.php">
+						<i class="fa fa-folder" aria-hidden="true"></i>
+						<span>Manufacturers</span>
+					</a>
+				</li>
 				<li>
 					<a href="create_task.php">
 						<i class="fa fa-plus" aria-hidden="true"></i>

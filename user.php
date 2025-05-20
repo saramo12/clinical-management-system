@@ -17,6 +17,20 @@ if (isset($_SESSION['role']) && isset($_SESSION['id']) && $_SESSION['role'] == "
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <style>
+         .table-wrapper {
+    max-height: 600px;
+    overflow-y: auto;
+    overflow-x: auto;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 24px rgba(102, 126, 234, 0.1);
+    border-radius: 12px;
+    background-color: #fff;
+    
+    max-width: 1050px; /* ✅ يمنع تجاوز الجرس - عدل حسب مكان الجرس */
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px;
+}
         table.main-table {
             width: 100%;
             border-collapse: separate;
@@ -139,6 +153,16 @@ if (isset($_SESSION['role']) && isset($_SESSION['id']) && $_SESSION['role'] == "
 
         /* لجعل الجدول متجاوب */
         @media (max-width: 768px) {
+            .table-wrapper::-webkit-scrollbar {
+    width: 8px;
+}
+.table-wrapper::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 8px;
+}
+.table-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
             .main-table thead {
                 display: none;
             }
@@ -195,6 +219,9 @@ if (isset($_SESSION['role']) && isset($_SESSION['id']) && $_SESSION['role'] == "
             <?php } ?>
             
             <?php if ($users != 0) { ?>
+                                <div class="main-container" style="max-width: 95vw; overflow-x: auto;">
+            <div class="table-wrapper">
+
                 <table class="main-table">
                     <thead>
                         <tr>
@@ -228,6 +255,8 @@ if (isset($_SESSION['role']) && isset($_SESSION['id']) && $_SESSION['role'] == "
                         <?php } ?>
                     </tbody>
                 </table>
+                </div>
+            </div>
             <?php } else { ?>
                 <h3>Empty</h3>
             <?php } ?>

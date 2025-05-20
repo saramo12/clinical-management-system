@@ -5,14 +5,14 @@ if (isset($_SESSION['role']) && isset($_SESSION['id']) && $_SESSION['role'] == "
     include "app/Model/User.php";
     
     if (!isset($_GET['id'])) {
-    	 header("Location: device.php");
+    	 header("Location: manufacturer.php");
     	 exit();
     }
     $id = $_GET['id'];
     $user = get_user_by_id($conn, $id);
 
     if ($user == 0) {
-    	 header("Location: device.php");
+    	 header("Location: manufacturer.php");
     	 exit();
     }
 

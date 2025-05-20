@@ -272,27 +272,30 @@ if (isset($_SESSION['role']) && isset($_SESSION['id']) && $_SESSION['role'] == "
                 </div>
 
 <div class="input-holder">
-                    <label for="warranty_period-start">Warranty Period Start</label>
-                    <input type="text" name="warranty_period-start" id="warranty_period-start" class="input-1" placeholder="Warrantyperiodstart" value="<?= htmlspecialchars($user['warrantyperiodstart']); ?>" required />
+                    <label for="warranty_period_start">Warranty Period Start</label>
+                    <input type="text" name="warranty_period_start" id="warranty_period_start" class="input-1" placeholder="Warrantyperiodstart" value="<?= htmlspecialchars($user['warrantyperiodstart']); ?>" required />
                 </div>
 
 
 
 
 <div class="input-holder">
-                    <label for="warranty_period-end">Warranty Period End</label>
-                    <input type="text" name="warranty_period-end" id="warranty_period-end" class="input-1" placeholder="Warrantyperiodend" value="<?= htmlspecialchars($user['warrantyperiodend']); ?>" required />
+                    <label for="warranty_period_end">Warranty Period End</label>
+                    <input type="text" name="warranty_period_end" id="warranty_period_end" class="input-1" placeholder="Warrantyperiodend" value="<?= htmlspecialchars($user['warrantyperiodend']); ?>" required />
                 </div>
 
 
 <div class="input-holder">
-                    <label for="company-contact">   Company Contact</label>
-                    <input type="text" name="company-contact" id="company-contact" class="input-1" placeholder="Companycontact" value="<?= htmlspecialchars($user['companycontact']); ?>"  />
+                    <label for="company_contact">   Company Contact</label>
+                    <input type="text" name="company_contact" id="company_contact" class="input-1" placeholder="Companycontact" value="<?= htmlspecialchars($user['companycontact']); ?>"  />
                 </div><div class="input-holder">
-                    <label for="company-telephone">Company Telephone</label>
-                    <input type="text" name="company-telephone" id="company-telephone" class="input-1" placeholder="companytelephone" value="<?= htmlspecialchars($user['companytelephone']); ?>"  />
+                    <label for="company_telephone">Company Telephone</label>
+                    <input type="text" name="company_telephone" id="company_telephone" class="input-1" placeholder="Companytelephone" value="<?= htmlspecialchars($user['companytelephone']); ?>"  />
                 </div>
-
+<div class="input-holder">
+                    <label for="hospital_code">Hospital Code</label>
+                    <input type="text" name="hospital_code" id="hospital_code" class="input-1" placeholder="Hospitalcode" value="<?= htmlspecialchars($user['hospitalcode']); ?>" required />
+                </div>
 
 
 <div class="input-holder">
