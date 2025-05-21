@@ -45,8 +45,18 @@
 					</a>
 				</li>
 
-
-
+<li>
+					<a href="purchasing-order-user.php">
+						<i class="fa fa-tachometer" aria-hidden="true"></i>
+						<span>Purchasing Orders</span>
+					</a>
+				</li>
+<li>
+					<a href="calibration-user.php">
+						<i class="fa fa-tachometer" aria-hidden="true"></i>
+						<span>Calibration </span>
+					</a>
+				</li>
 
 				<li>
 					<a href="my_task.php">
