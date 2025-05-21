@@ -11,11 +11,43 @@
 			 <!-- Employee Navigation Bar -->
 			<ul id="navList">
 				<li>
-					<a href="index.php">
+					<a href="zahra-user.php">
 						<i class="fa fa-tachometer" aria-hidden="true"></i>
 						<span>Dashboard</span>
 					</a>
 				</li>
+
+<li>
+					<a href="device-user.php">
+						<i class="fa fa-tachometer" aria-hidden="true"></i>
+						<span>Devices</span>
+					</a>
+				</li>
+<li>
+					<a href="company-user.php">
+						<i class="fa fa-tachometer" aria-hidden="true"></i>
+						<span>Companies</span>
+					</a>
+				</li>
+
+<li>
+					<a href="manufacturer-user.php">
+						<i class="fa fa-tachometer" aria-hidden="true"></i>
+						<span>Manufacturer</span>
+					</a>
+				</li>
+
+
+<li>
+					<a href="workorder-user.php">
+						<i class="fa fa-tachometer" aria-hidden="true"></i>
+						<span>Work Orders</span>
+					</a>
+				</li>
+
+
+
+
 				<li>
 					<a href="my_task.php">
 						<i class="fa fa-tasks" aria-hidden="true"></i>
@@ -119,18 +151,8 @@
 					</a>
 				</li>
 
-				<li>
-					<a href="create_task.php">
-						<i class="fa fa-plus" aria-hidden="true"></i>
-						<span>Create Task</span>
-					</a>
-				</li>
-				<li>
-					<a href="tasks.php">
-						<i class="fa fa-tasks" aria-hidden="true"></i>
-						<span>All Tasks</span>
-					</a>
-				</li>
+				
+				
 				<li>
 					<a href="logout.php">
 						<i class="fa fa-sign-out" aria-hidden="true"></i>

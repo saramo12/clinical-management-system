@@ -45,7 +45,7 @@ if (isset($_POST['user_name']) && isset($_POST['password'])) {
 	       	   			$_SESSION['role'] = $role;
 	       	   			$_SESSION['id'] = $id;
 	       	   			$_SESSION['username'] = $usernameDb;
-                        header("Location: ../index2.php");
+                        header("Location: ../zahra-user.php");
 	       	   		}else {
 	       	   		   $em = "Unknown error occurred ";
 							   header("Location: ../login.php?error=$em");
