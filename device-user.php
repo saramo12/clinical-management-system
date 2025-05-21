@@ -237,7 +237,7 @@ if (isset($_SESSION['role']) && isset($_SESSION['id']) && $_SESSION['role'] == "
     <div class="body">
         <?php include "inc/nav.php"; ?>
         <section class="section-1">
-            <h4 class="title">Add Devices <a href="add-device-user.php">Add Device</a></h4>
+            <h4 class="title">Manage Devices <a href="add-device-user.php">Add Device</a></h4>
 
             <!-- عرض رسائل النجاح -->
             <?php if (isset($_GET['success'])) { ?>

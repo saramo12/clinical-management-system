@@ -205,27 +205,15 @@ if (isset($_SESSION['role']) && isset($_SESSION['id']) && $_SESSION['role'] == "
             .main-table td:nth-of-type(2)::before { content: "Id"; }
             
             
-            .main-table td:nth-of-type(3)::before { content: "Device Serial"; }
-            .main-table td:nth-of-type(4)::before { content: "Requested By"; }
-            .main-table td:nth-of-type(5)::before { content: "Department"; }
-            .main-table td:nth-of-type(6)::before { content: "Date Received"; }
-            .main-table td:nth-of-type(7)::before { content: "Time Received"; }
-            .main-table td:nth-of-type(8)::before { content: "Issue Description"; }
-            .main-table td:nth-of-type(9)::before { content: "Repair Description"; }
-            .main-table td:nth-of-type(10)::before { content: "Inhouse Fixed By"; }
-            .main-table td:nth-of-type(11)::before { content: "Contacted Manufacturer"; }
-            .main-table td:nth-of-type(12)::before { content: "Outhouse Fixed By"; }
-            .main-table td:nth-of-type(13)::before { content: "Repair Cost"; }
-            .main-table td:nth-of-type(14)::before { content: "Repair Type"; }
-            .main-table td:nth-of-type(15)::before { content: "Used Spare Parts"; }
-            .main-table td:nth-of-type(16)::before { content: "Status"; }
-            .main-table td:nth-of-type(17)::before { content: "Start Date"; }
-            .main-table td:nth-of-type(18)::before { content: "Start Time"; }
-            .main-table td:nth-of-type(19)::before { content: "End Date"; }
-            .main-table td:nth-of-type(20)::before { content: "End Time"; }
-            .main-table td:nth-of-type(21)::before { content: "Downtime Duration"; }
+            .main-table td:nth-of-type(3)::before { content: "Company Name"; }
+            .main-table td:nth-of-type(4)::before { content: "Invoice Date"; }
+            .main-table td:nth-of-type(5)::before { content: "Invoice Id"; }
+            .main-table td:nth-of-type(6)::before { content: "Device Serial"; }
+            .main-table td:nth-of-type(7)::before { content: "Device Name"; }
+                        .main-table td:nth-of-type(8)::before { content: "QT"; }
+            .main-table td:nth-of-type(9)::before { content: "Price"; }
           
-
+                        
         }
     </style>
 </head>
@@ -235,7 +223,7 @@ if (isset($_SESSION['role']) && isset($_SESSION['id']) && $_SESSION['role'] == "
     <div class="body">
         <?php include "inc/nav.php"; ?>
         <section class="section-1">
-            <h4 class="title">Manage WorkOrder <a href="add-workorder-user.php">Add WorkOrder</a></h4>
+            <h4 class="title">Manage Invoice <a href="add-invoices-user.php">Add Invoice</a></h4>
 
             <!-- عرض رسائل النجاح -->
             <?php if (isset($_GET['success'])) { ?>
@@ -254,27 +242,14 @@ if (isset($_SESSION['role']) && isset($_SESSION['id']) && $_SESSION['role'] == "
                             <th>#</th>
                                                         <th>Id</th>
 
+                            <th>Company Name</th>
+                            <th>Invoice Date</th>
+                            <th>Invoice Id Name</th>
                             <th>Device Serial</th>
-                            <th>Requested By</th>
-                            <th>Department</th>
-                            <th>Date Received</th>
-                            <th>Time Received</th>
-                            <th>Issue Description</th>
-                            <th>Repair Description</th>
-                            <th>Inhouse Fixed By</th>
-                            <th>Contacted Manufacturer</th>
-                            <th>Outhouse Fixed By</th>
-                            <th>Repair Cost</th>
-                            <th>Repair Type</th>
-                            <th>Used Spare Parts</th>
-                            <th>Status</th>
-                            <th>Start Date</th>
-                            <th>Start Time</th>
-                            <th>End Date</th>
-                            <th>End Time</th>
-                            <th>Downtime Duration</th>
+                            <th>Device Name</th>
+                             <th>QT</th>
+                            <th>Price</th>
                            
-                                                  
                         </tr>
                     </thead>
                     <tbody>
@@ -282,28 +257,16 @@ if (isset($_SESSION['role']) && isset($_SESSION['id']) && $_SESSION['role'] == "
                             <tr>
                                 <td><?= ++$i ?></td>
                                                                 <td><?= htmlspecialchars($user['id'] ?? '') ?></td>
+                                <td><?= htmlspecialchars($user['company_name']) ?></td>
 
-                                <td><?= htmlspecialchars($user['device_serial']) ?></td>
-                                <td><?= htmlspecialchars($user['requested_by'] ?? '') ?></td>
-                                <td><?= htmlspecialchars($user['department'] ?? '') ?></td>
-                                <td><?= htmlspecialchars($user['date_received'] ?? '') ?></td>
-                                <td><?= htmlspecialchars($user['time_received'] ?? '') ?></td>
-                                <td><?= htmlspecialchars($user['issue_description'] ?? '') ?></td>
-                                <td><?= htmlspecialchars($user['repair_description'] ?? '') ?></td>
-                                <td><?= htmlspecialchars($user['inhouse_fixed_by'] ?? '') ?></td>
-                                <td><?= htmlspecialchars($user['contacted_manufacturer'] ?? '') ?></td>
-                                <td><?= htmlspecialchars($user['outhouse_fixed_by'] ?? '') ?></td>
-                                <td><?= htmlspecialchars($user['repair_cost'] ?? '') ?></td>
-                                <td><?= htmlspecialchars($user['repair_type'] ?? '') ?></td>
-                                <td><?= htmlspecialchars($user['used_spare_parts'] ?? '') ?></td>
-                                <td><?= htmlspecialchars($user['status'] ?? '') ?></td>
-                                <td><?= htmlspecialchars($user['start_date'] ?? '') ?></td>
-                                <td><?= htmlspecialchars($user['start_time'] ?? '') ?></td>
-                                <td><?= htmlspecialchars($user['end_date'] ?? '') ?></td>
-                                <td><?= htmlspecialchars($user['end_time'] ?? '') ?></td>
-                                <td><?= htmlspecialchars($user['downtime_duration'] ?? '') ?></td>
+                                <td><?= htmlspecialchars($user['invoice_date']) ?></td>
+                                <td><?= htmlspecialchars($user['invoice_id'] ?? '') ?></td>
+                                <td><?= htmlspecialchars($user['device_serial'] ?? '') ?></td>
+                                <td><?= htmlspecialchars($user['device_name'] ?? '') ?></td>
+                                 <td><?= htmlspecialchars($user['qt'] ?? '') ?></td>
+                                 <td><?= htmlspecialchars($user['price'] ?? '') ?></td>
 
-                               
+                                 
                             </tr>
                         <?php } ?>
                     </tbody>
