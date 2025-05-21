@@ -147,7 +147,7 @@ if (isset($_SESSION['role']) && isset($_SESSION['id']) && $_SESSION['role'] == "
 
 				
 
-				<button class="edit-btn" type="submit">Add Purchasing Order</button>
+				<button class="edit-btn" type="submit">Add Calibration</button>
 			</form>
 		</section>
 	</div>
