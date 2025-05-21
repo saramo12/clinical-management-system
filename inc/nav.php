@@ -106,6 +106,18 @@
 					</a>
 				</li>
 
+				<li>
+					<a href="report-form.php">
+						<i class="fa fa-folder" aria-hidden="true"></i>
+						<span>reports</span>
+					</a>
+				</li>
+<li>
+					<a href="manage-report.php">
+						<i class="fa fa-folder" aria-hidden="true"></i>
+						<span>reports manage</span>
+					</a>
+				</li>
 
 				<li>
 					<a href="create_task.php">
