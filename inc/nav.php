@@ -57,17 +57,23 @@
 						<span>Calibration </span>
 					</a>
 				</li>
-
-				<li>
-					<a href="my_task.php">
-						<i class="fa fa-tasks" aria-hidden="true"></i>
-						<span>My Task</span>
+<li>
+					<a href="invoices-user.php">
+						<i class="fa fa-tachometer" aria-hidden="true"></i>
+						<span>Invoices </span>
 					</a>
 				</li>
+
 				<li>
-					<a href="profile.php">
-						<i class="fa fa-user" aria-hidden="true"></i>
-						<span>Profile</span>
+					<a href="report-form.php">
+						<i class="fa fa-folder" aria-hidden="true"></i>
+						<span>reports</span>
+					</a>
+				</li>
+<li>
+					<a href="manage-report.php">
+						<i class="fa fa-folder" aria-hidden="true"></i>
+						<span>reports manage</span>
 					</a>
 				</li>
 				<li>

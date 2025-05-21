@@ -226,7 +226,7 @@ if (isset($_SESSION['role']) && isset($_SESSION['id']) && $_SESSION['role'] == "
     <div class="body">
         <?php include "inc/nav.php"; ?>
         <section class="section-1">
-            <h4 class="title">Add Calibration <a href="add-calibration-user.php">Add Calibration</a></h4>
+            <h4 class="title">Manage Calibration <a href="add-calibration-user.php">Add Calibration</a></h4>
 
             <!-- عرض رسائل النجاح -->
             <?php if (isset($_GET['success'])) { ?>
