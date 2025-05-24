@@ -213,7 +213,7 @@
 
 .section-1 {
 	width: 100%;
-	background: #ffe;
+	background: rgb(241, 240, 240);
 }
 .section-1 .title a:hover{
 	opacity: .6;
